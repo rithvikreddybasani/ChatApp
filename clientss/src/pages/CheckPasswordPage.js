@@ -38,7 +38,7 @@ const CheckPasswordPage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    const URL = `${process.env.REACT_APP_BACKEND_URL}/api/password`;
+    const URL = `https://chat-app-server-two-liart.vercel.app/api/password`;
 
     try {
       const response = await axios({
