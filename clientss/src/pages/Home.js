@@ -43,7 +43,7 @@ const Home = () => {
 
   /***socket connection */
   useEffect(() => {
-    const socketConnection = io(https://chat-app-server-two-liart.vercel.app, {
+    const socketConnection = io("https://chat-app-server-two-liart.vercel.app", {
       auth: {
         token: localStorage.getItem("token"),
       },
@@ -73,9 +73,9 @@ const Home = () => {
       </section>
 
       <div
-        className={`justify-center items-center flex-col gap-2 hidden ${
-          !basePath ? "hidden" : "lg:flex"
-        }`}
+        className={`justify-center items-center flex-col gap-2 ${
+          !basePath && "hidden"
+        } lg:flex`}
       >
         <div>
           <img src={logo} width={350} alt="logo" />
