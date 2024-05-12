@@ -17,14 +17,7 @@ app.use(
   })
 );
 
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log("Connected to the database");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+
 
 app.use(express.json());
 app.use(cookiesParser());
