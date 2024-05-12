@@ -1,17 +1,19 @@
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 const connectDB = require("./config/connectDB");
 const router = require("./routes/index");
 const cookiesParser = require("cookie-parser");
 const { app, server } = require("./socket/index");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 app.use(
   cors({
     origin: "https://mern-chat-app-client-zeta.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true,
+
   })
 );
 
