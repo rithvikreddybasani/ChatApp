@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 app.use(
   cors({
     origin: process.env.FRONTEND_URL,
+    methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
 );
@@ -36,7 +37,8 @@ app.get("/", (request, response) => {
 
 //api endpoints
 app.use("/api", router);
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+connectDB().then(() => {
+  server.listen(PORT, () => {
+    console.log("server running at " + PORT);
+  });
 });
