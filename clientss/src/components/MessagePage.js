@@ -13,6 +13,9 @@ import Loading from "./Loading";
 import backgroundImage from "../assets/wallapaper.jpeg";
 import { IoMdSend } from "react-icons/io";
 import moment from "moment";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { toggleTheme } from "../redux/themeSlice";
 
 const MessagePage = () => {
   const params = useParams();
@@ -36,6 +39,8 @@ const MessagePage = () => {
   const [loading, setLoading] = useState(false);
   const [allMessage, setAllMessage] = useState([]);
   const currentMessage = useRef(null);
+  const dispatch = useDispatch();
+  const { theme } = useSelector((state) => state.theme);
 
   useEffect(() => {
     if (currentMessage.current) {
