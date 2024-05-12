@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "https://mern-chat-app-client-zeta.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
