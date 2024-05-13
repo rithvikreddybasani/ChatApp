@@ -16,8 +16,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://mern-chat-app-client-mauve.vercel.app",
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true,
+    methods: ["POST", "GET"],
+  
   },
 });
 
