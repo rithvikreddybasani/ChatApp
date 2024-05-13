@@ -17,9 +17,10 @@ const io = new Server(server, {
   cors: {
     origin: "https://mern-chat-app-client-mauve.vercel.app",
     methods: ["POST", "GET"],
-  
+    credentials: true // Allow sending cookies
   },
 });
+
 
 /***
  * socket running at http://localhost:8080/
