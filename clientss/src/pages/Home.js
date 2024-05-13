@@ -19,7 +19,7 @@ const Home = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const URL = `https://chat-app-server-two-liart.vercel.app/api/user-details`;
+      const URL = `https://mern-chat-app-mauve.vercel.app`;
       const response = await axios({
         url: URL,
         withCredentials: true,
@@ -46,7 +46,7 @@ const Home = () => {
 
   /***socket connection */
   useEffect(() => {
-    const socketConnection = io("https://chat-app-server-two-liart.vercel.app", {
+    const socketConnection = io("https://mern-chat-app-mauve.vercel.app", {
       auth: {
         token: localStorage.getItem("token"),
       },
