@@ -27,7 +27,7 @@ const CheckEmailPage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    const URL = `https://chat-app-server-two-liart.vercel.app/api/email`;
+    const URL = `https://mern-chat-app-mauve.vercel.app`;
 
     try {
       const response = await axios.post(URL, data);
