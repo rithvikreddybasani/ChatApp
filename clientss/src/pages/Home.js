@@ -19,7 +19,7 @@ const Home = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const URL = `https://mern-chat-app-mauve.vercel.app`;
+      const URL = `https://mern-chat-app-mauve.vercel.app/api/user-details`;
       const response = await axios({
         url: URL,
         withCredentials: true,
