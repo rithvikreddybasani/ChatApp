@@ -38,7 +38,7 @@ const CheckPasswordPage = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    const URL = `https://mern-chat-app-mauve.vercel.app`;
+    const URL = `https://mern-chat-app-mauve.vercel.app/api/password`;
 
     try {
       const response = await axios({
