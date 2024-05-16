@@ -1,7 +1,7 @@
 const UserModel = require("../models/UserModel");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-
+// comment
 async function checkPassword(request, response) {
   try {
     const { password, userId } = request.body;
